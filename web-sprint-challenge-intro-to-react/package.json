@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "frontend": "webpack serve --open",
     "backend": "node backend/server.js",
-    "start": "npm run backend",
+    "start": "npm run backend", 
     "install:violently": "rm -rf node_modules package-lock.json && npm cache clean --force && npm i"
   },
   "devDependencies": {
