@@ -3,19 +3,24 @@ import axios from 'axios'
 
 import Character from './Character'
 
+
 const urlPlanets = 'http://localhost:9009/api/planets'
 const urlPeople = 'http://localhost:9009/api/people'
 
 function App() {
   // ❗ Create state to hold the data from the API
-  axios.get(urlPeople)
-        .then((data) => console.log(data.data) )
+  const [character, setCharacter] = useState(null)
   // ❗ Create effects to fetch the data and put it in state
+  useEffect(() => {
+    
+  })
   return (
     <div>
       <h2>Star Wars Characters</h2>
       <p>See the README of the project for instructions on completing this challenge</p>
-      {/* ❗ Map over the data in state, rendering a Character at each iteration */}
+      {character.map((item) => {
+        <p>{item}</p>
+      })}
     </div>
   )
 }
